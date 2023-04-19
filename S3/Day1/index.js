@@ -3,7 +3,7 @@ const mongoose=require("mongoose")
 
 const main=async()=>{
     try{
-        const connection=mongoose.connect("mongodb://127.0.0.1:27017/learnmongo")
+        const connection=await mongoose.connect("mongodb://127.0.0.1:27017/learnmongo")
         console.log("connected to the DB")
         const user=new Usermodel({
             name:"rohit",
